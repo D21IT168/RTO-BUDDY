@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Mobile app
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="icon" type="image/gif/png" href="image/logo_22.png">
+        <link rel="stylesheet" type="text/css" href="slide.css">
+        <script type="text/javascript" src="slide.js"></script>
+        <style>
+        
+            #QR{
+                display: flex;
+                height: 300px;
+                width: 80%;
+                justify-content: center;
+                align-items: center;
+                margin: 0% auto;
+            }
+            #QRimg{
+                height: 200px;
+                width: 200px;
+            }
+            #QRbtndiv{
+                width: 100%;
+                margin-top: 0%;
+            }
+            h2{
+                left: 50%;
+                width: 60%;
+                transform: translateX(-50%);
+                position: absolute;
+                text-align: center;
+                margin-top:-30px;
+            }
+            #QRbtn{
+                left: 50%;
+                transform: translateX(-50%);
+                position: absolute;
+                margin-top: 0px;
+                font-size: 25px;
+            }
+            @media screen and (max-width: 750px) and (orientation: portrait){
+                #QRbtn{margin-top: 0px;}
+                h2{font-size: 25px;width: 80%;}    
+            }
+        </style>
+    </head>
+    <body>
+        <div class="all">
+            <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">HOME</a>
+            <a href="question.html">QUESTION BANK</a>
+            <a href="traffic.html">TRAFFIC SIGNAL</a>
+            <a href="exam.html">EXAM</a>
+            <a href="#">MOBILE APP</a>
+            </div>
+            <div id="main">
+            <img src="image/logo_22.png" alt="img" id="logo"><br>
+            <span id="open" onclick="openNav()">&#9776; Menu</span><br>
+            </div>
+        </div> 
+        <div id="QR">
+            <img src="image/QRlogo.png" id="QRimg"> 
+        </div>
+        <h2>Scan QRcode to download from playstore</h2> <br><br><br>
+        <div id="QRbtndiv">
+                <a href="https://play.google.com/store/apps/details?id=com.devsoftzz.rto" target="_blank"><button id="QRbtn" class="btn btn-success">Download</button></a>
+        </div>
+    </body>
+</html>

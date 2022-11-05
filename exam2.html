@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>New Rto App</title>
+        <link rel="icon" type="image/gif/png" href="image/logo_22.png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="slide.css">
+        <link rel="stylesheet" type="text/css" href="question.css">        
+        <script type="text/javascript" src="Que.js"></script>
+        <script type="text/javascript" src="timer2.js"></script>
+        <link rel="stylesheet" type="text/css" href="exam2.css">
+    </head>
+    <body onload="gen()">
+        <div id="main">
+                <div id="cor" class="rounded-lg">
+
+                </div>
+                <div id="time" class="rounded-right">
+                    <div id="min">48</div>
+                </div>
+                <div id="clock" class="rounded-left">
+                        <img src="image/clock.png" id="clock2">
+                </div>
+            <div id="content" class="rounded-lg">
+                <div class="set rounded-lg" id="set">
+                    <div  class="Que rounded-lg" id="Que">
+                        <div id="noqu" class="Que">
+                            <div class="no" ><strong id="no"></strong></div>
+                            <div class="q" id="question"></div>
+                        </div>
+                        <div id="imgdiv"><img id="img"></div>
+                    </div>
+                    <div class="rounded-lg" id="mcq">
+                        <label class="op radio rounded-lg" id="label1"><input type="radio" name="option" value="a" id="op1" ><span id="opt1" for="op1"></span></label>
+                        <label class="op radio rounded-lg" id="label2"><input type="radio" name="option" value="b" id="op2"><span id="opt2" for="op2"></span></label>
+                        <label class="op radio rounded-lg" id="label3"><input type="radio" name="option" value="c" id="op3"><span id="opt3" for="op3"></span></label>  
+                    </div><br>
+                    <div id="navig">
+                        <h3 id="num"></h3>
+                    </div>
+                </div>
+                <div id="but">
+                    <button onclick="checknull()" class="btn btn-primary" id="submit">Submit</button>
+                    <button onclick="gen()" class="btn btn-primary" id="next">next que</button>
+                    <button onclick="result()" id="result" class="btn btn btn-outline-success">Result</button>
+                </div>
+            </div>
+        </div>
+        <div id="resultsec">
+
+            <div id="correctans" class="rounded-lg">0<br>Right</div>
+            <div id="wrongans" class="rounded-lg">0<br>Wrong</div>
+            <div id="quesection" class="rounded-lg">
+            <div class="set rounded-lg">
+                <div  class="Que rounded-lg">
+                    <div class="no"><strong id="1no"></strong></div>
+                    <div class="q" id="1que"></div>
+                    <div id="1imgdiv"><img id="1img"></div>
+                </div>
+                <div class=" mcq rounded-lg">
+                    <li class="rounded-top" id="1opt1">A.</li>
+                    <li id="1opt2">B.</li>
+                    <li class="rounded-bottom" id="1opt3">C.</li>                                    
+                </div>
+            </div>
+            
+            <div class="set rounded-lg">
+                <div  class="Que rounded-lg">
+                    <div class="no"><strong id="2no"></strong></div>
+                    <div class="q" id="2que"></div>
+                    <div id="2imgdiv"><img id="2img"></div>
+                </div>
+                <div class=" mcq rounded-lg">
+                    <li class="rounded-top" id="2opt1">A.</li>
+                    <li id="2opt2">B.</li>
+                    <li class="rounded-bottom" id="2opt3">C.</li>                                    
+                </div>
+            </div>
+
+            <div class="set rounded-lg">
+                <div  class="Que rounded-lg">
+                    <div class="no" ><strong id="3no"></strong></div>
+                    <div class="q" id="3que"></div>
+                    <div id="3imgdiv"><img id="3img"></div>
+                </div>
+                <div class=" mcq rounded-lg">
+                    <li class="rounded-top" id="3opt1">A.</li>
+                    <li id="3opt2">B.</li>
+                    <li class="rounded-bottom" id="3opt3">C.</li>                                    
+                </div>
+            </div>
+
+            <div class="set rounded-lg">
+                <div  class="Que rounded-lg">
+                    <div class="no"><strong id="4no"></strong></div>
+                    <div class="q" id="4que"></div>
+                    <div id="4imgdiv"><img id="4img"></div>
+                </div>
+                <div class=" mcq rounded-lg">
+                    <li class="rounded-top" id="4opt1">A.</li>
+                    <li id="4opt2">B.</li>
+                    <li class="rounded-bottom" id="4opt3">C.</li>                                    
+                </div>
+            </div>
+
+            <div class="set rounded-lg">
+                <div  class="Que rounded-lg">
+                    <div class="no"><strong id="5no"></strong></div>
+                    <div class="q" id="5que"></div>
+                    <div id="5imgdiv"><img id="5img"></div>
+                </div>
+                <div class=" mcq rounded-lg">
+                    <li class="rounded-top" id="5opt1">A.</li>
+                    <li id="5opt2">B.</li>
+                    <li class="rounded-bottom" id="5opt3">C.</li>                                    
+                </div>
+            </div>
+
+            <div class="set rounded-lg">
+                <div  class="Que rounded-lg">
+                    <div class="no" ><strong id="6no"></strong></div>
+                    <div class="q" id="6que"></div>
+                    <div id="6imgdiv"><img id="6img"></div>
+                </div>
+                <div class=" mcq rounded-lg">
+                    <li class="rounded-top" id="6opt1">A.</li>
+                    <li id="6opt2">B.</li>
+                    <li class="rounded-bottom" id="6opt3">C.</li>                                    
+                </div>
+            </div>
+
+            <div class="set rounded-lg">
+                <div  class="Que rounded-lg">
+                    <div class="no"><strong id="7no"></strong></div>
+                    <div class="q" id="7que"></div>
+                    <div id="7imgdiv"><img id="7img"></div>
+                </div>
+                <div class=" mcq rounded-lg">
+                    <li class="rounded-top" id="7opt1">A.</li>
+                    <li id="7opt2">B.</li>
+                    <li class="rounded-bottom" id="7opt3">C.</li>                                    
+                </div>
+            </div>
+            
+            <div class="set rounded-lg">
+                <div  class="Que rounded-lg">
+                    <div class="no"><strong id="8no"></strong></div>
+                    <div class="q" id="8que"></div>
+                    <div id="8imgdiv"><img id="8img"></div>
+                </div>
+                <div class=" mcq rounded-lg">
+                    <li class="rounded-top" id="8opt1">A.</li>
+                    <li id="8opt2">B.</li>
+                    <li class="rounded-bottom" id="8opt3">C.</li>                                  
+                </div>
+            </div>
+
+            <div class="set rounded-lg">
+                <div  class="Que rounded-lg">
+                    <div class="no" ><strong id="9no"></strong></div>
+                    <div class="q" id="9que"></div>
+                    <div id="9imgdiv"><img id="9img"></div>
+                </div>
+                <div class=" mcq rounded-lg">
+                    <li class="rounded-top" id="9opt1">A.</li>
+                    <li id="9opt2">B.</li>
+                    <li class="rounded-bottom" id="9opt3">C.</li>                                    
+                </div>
+            </div>
+
+            <div class="set rounded-lg">
+                <div  class="Que rounded-lg">
+                    <div class="no"><strong id="10no"></strong></div>
+                    <div class="q" id="10que"></div>
+                    <div id="10imgdiv"><img id="10img"></div>
+                </div>
+                <div class=" mcq rounded-lg">
+                    <li class="rounded-top" id="10opt1">A.</li>
+                    <li id="10opt2">B.</li>
+                    <li class="rounded-bottom" id="10opt3">C.</li>                                    
+                </div>
+            </div>
+            <div class="set rounded-lg">
+                <div  class="Que rounded-lg">
+                    <div class="no"><strong id="11no"></strong></div>
+                    <div class="q" id="11que"></div>
+                    <div id="11imgdiv"><img id="11img"></div>
+                </div>
+                <div class=" mcq rounded-lg">
+                    <li class="rounded-top" id="11opt1">A.</li>
+                    <li id="11opt2">B.</li>
+                    <li class="rounded-bottom" id="11opt3">C.</li>                                    
+                </div>
+            </div>
+
+            <div class="set rounded-lg">
+                <div  class="Que rounded-lg">
+                    <div class="no" ><strong id="12no"></strong></div>
+                    <div class="q" id="12que"></div>
+                    <div id="12imgdiv"><img id="12img"></div>
+                </div>
+                <div class=" mcq rounded-lg">
+                    <li class="rounded-top" id="12opt1">A.</li>
+                    <li id="12opt2">B.</li>
+                    <li class="rounded-bottom" id="12opt3">C.</li>                                    
+                </div>
+            </div>
+
+            <div class="set rounded-lg">
+                <div  class="Que rounded-lg">
+                    <div class="no"><strong id="13no"></strong></div>
+                    <div class="q" id="13que"></div>
+                    <div id="13imgdiv"><img id="13img"></div>
+                </div>
+                <div class=" mcq rounded-lg">
+                    <li class="rounded-top" id="13opt1">A.</li>
+                    <li id="13opt2">B.</li>
+                    <li class="rounded-bottom" id="13opt3">C.</li>
+                </div>                                  
+            </div>
+
+            <div class="set rounded-lg">
+                <div  class="Que rounded-lg">
+                    <div class="no"><strong id="14no"></strong></div>
+                    <div class="q" id="14que"></div>
+                    <div id="14imgdiv"><img id="14img"></div>
+                </div>
+                <div class=" mcq rounded-lg">
+                    <li class="rounded-top" id="14opt1">A.</li>
+                    <li id="14opt2">B.</li>
+                    <li class="rounded-bottom" id="14opt3">C.</li>
+                </div>                                  
+            </div>
+            
+            <div class="set rounded-lg">
+                <div  class="Que rounded-lg">
+                    <div class="no"><strong id="15no"></strong></div>
+                    <div class="q" id="15que"></div>
+                    <div id="15imgdiv"><img id="15img"></div>
+                </div>
+                <div class=" mcq rounded-lg">
+                    <li class="rounded-top" id="15opt1">A.</li>
+                    <li id="15opt2">B.</li>
+                    <li class="rounded-bottom" id="15opt3">C.</li>
+                </div>                                  
+            </div>
+        
+        <br>
+        <div>
+            <a href="exam.html"><button id="restart" class="btn btn-primary">Restart</button></a>
+            <a href="index.html"><button id="homes" class="btn btn-primary">Home</button></a></div><br><br>
+        </div><br>
+        </div> 
+            <script type="text/javascript" src="exam.js"></script>
+    </body>
+</html>

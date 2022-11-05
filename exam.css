@@ -1,0 +1,49 @@
+#quest{
+    width: 60%;
+    margin: 5% 20% 0% 20%;
+    height: 400px;
+    background: wheat;
+    position: relative;
+}
+#set{
+    height: 70%;
+
+}
+#next{
+    margin-left: 50%;
+    margin-bottom: 2px;
+    
+}
+#animated{
+    width: 40%;
+    height: 100vh;
+    margin: auto;
+    text-align: center; 
+    display: block;
+    margin-top: 3%;
+    /* justify-items: center  */
+}
+#exam_detail
+{
+    background-color: #00DDCD;
+    padding: 10px;
+}
+#img{
+    padding-top: 1%;
+    padding-bottom:1%; 
+}
+#start{
+    min-width: 100px;
+}
+#start:hover{
+    font-weight: bold;
+}
+@media screen and (max-width: 700px) and (orientation: portrait){
+    #animated{width: 70%;}
+}
+@media screen and (max-width: 550px) and (orientation: portrait){
+    #animated{width: 80%;}
+}
+@media screen and (max-width: 300px) and (orientation: portrait){
+    body{display: none;}
+}

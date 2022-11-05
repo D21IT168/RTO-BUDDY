@@ -1,0 +1,88 @@
+/* #main{
+    position: sticky;
+    top: 5px;
+} */
+
+#Question{
+    width: 60%;
+    margin: auto;
+    margin-top: 3%;
+    font-size: 20px;
+}
+#navlist{
+    width: 60%;
+    display: flex;
+    /* flex-direction: row; */
+    flex-flow: row; 
+    justify-content: space-between;
+    margin: 0% auto;
+    font-size: 18px;
+    margin-top: 1%;
+    background-color: rgba(255, 255, 255, 0.7)
+}
+/* .nav-item{
+    padding: 0%;
+    align-self: center;
+} */
+.nav-link{
+    padding: 5px;
+    align-self: center;
+}
+.set{
+    background-color: rgb(245, 245, 245);
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 1.5%;
+}
+.Que{
+    background-color: aquamarine;
+    margin-bottom: 5px;
+}
+.no{
+    margin-left: 5px;
+}
+.q{
+    margin-left: 50px;
+}
+.Que img{
+    max-width: 100px;
+    max-height: 100px;
+    margin: 10px 0;
+    margin-left: 110px;
+}
+.Que strong{
+    float: left;
+}
+li{
+    list-style-type:none;
+}
+.mcq{
+    background-color: white;
+    margin-top: 0%;
+}
+.ans{
+    background-color: rgb(151, 215, 34);
+}
+@media screen and (max-width: 1000px) and (orientation: portrait){
+    #navlist{ margin-top: 5%;font-size: 15px;width: 80%}
+    .nav-link{padding: 4px;}
+}
+@media screen and (max-width: 850px) and (orientation: portrait){
+    #navlist{ margin-top: 5%;font-size: 15px;}
+    .nav-link{padding: 2px;}
+    #Question{width: 80%;}
+}
+@media screen and (max-width: 550px) and (orientation: portrait){
+    
+    #navlist{font-size: 10px; margin-top: 5%;width: 100%;}
+    .nav-link{padding: 1px;}
+}
+@media screen and (max-width: 450px) and (orientation: portrait){
+    .Que img{
+        margin-left: 75px;
+    }
+}
+@media screen and (max-width: 350px) and (orientation: portrait){
+    .Que img{
+        margin-left: 50px;
+    }
+}
